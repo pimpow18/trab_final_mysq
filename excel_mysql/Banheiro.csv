@@ -1,0 +1,16 @@
+id_banheiro;tipo_de_privadas;chuveiro_ou_banheira;tipos_de_pias;numero_de_plantas;numero_de_armarios
+1;privada com sistema a vácuo;banheira;pia de granito;4;3
+2;privada com caixa acoplada;chuveiro;pia de inox;2;2
+3;privada eletrica;banheira;pia de cerâmica;2;1
+4;privada com caixa acoplada;chuveiro;pia de plastico;1;1
+5;privada com caixa acoplada;chuveiro;pia de granito;2;2
+6;privada com caixa acoplada;banheira;pia de inox;6;3
+7;privada com sistema a vácuo;banheira;pia de granito;3;2
+8;privada com caixa acoplada;banheira;pia de granito;2;2
+9;privada com caixa acoplada;chuveiro;pia de plastico;2;2
+10;privada eletrica;banheira;pia de cerâmica;1;2
+11;privada com sistema a vácuo;chuveiro;pia de cerâmica;4;2
+12;privada com sistema a vácuo;chuveiro;pia de cerâmica;2;3
+13;privada eletrica;chuveiro;pia de inox;6;1
+14;privada eletrica;banheira;pia de granito;3;2
+15;privada com caixa acoplada;chuveiro;pia de granito;3;2

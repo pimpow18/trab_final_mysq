@@ -1,0 +1,16 @@
+id_garagem ;carro_ou_moto;numero_de_automoveis ;tipo_de_portao
+1;carro;2;portão deslizante
+2;carro;2;portão pivotante
+3;carro;1;portão basculantes
+4;moto;1;portão deslizante
+5;moto;2;portão basculantes
+6;carro;3;portão deslizante
+7;moto;3;portão pivotante
+8;carro;1;portão deslizante
+9;carro;2;portão deslizante
+10;moto;1;portão deslizante
+11;moto;1;portão basculantes
+12;carro;2;portão pivotante
+13;moto;1;portão pivotante
+14;moto;2;portão basculantes
+15;carro;3;portão pivotante

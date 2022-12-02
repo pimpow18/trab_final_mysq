@@ -1,0 +1,70 @@
+erDiagram
+          casa ||--o{ sala_de_estar : ""
+          sala_de_estar ||--o{ cozinha : "" 
+          corredor ||--o{ sala_de_estar : ""
+          corredor ||--o{ escritorio : ""
+          corredor ||--o{ banheiro : ""
+          corredor ||--o{ quartos : ""
+          sala_de_estar ||--o{ patio : ""
+          patio ||--o{ garagem : ""
+       
+       class casa {
+        int         id
+        string      enderoco
+        string      cidade
+        string      estado	
+        int         numero_de_residencia
+        int         cep
+       }
+       class sala_de_estar {
+        int         id_sala_de_estar
+        int         lugares_do_sofa	
+        string      material_da_cadeira 
+        string      tipos_de_mesa
+        int         planta
+        int         numero_de_eletrodomesticos
+       }
+       class banheiro {
+        int         id_banheiro
+        string      tipo_de_privadas
+        string      chuveiro_ou_banheira
+        string      tipos_de_pias
+        int         numero_de_plantas
+        int         numero_de_armarios
+       }
+       class cozinha{
+        int         id_cozinha	
+        string      Tipo_De_fogao
+        int         Numero_de_armarios
+        string      Tipo_de_geladeira
+        date        Data_do_ultimo_rancho
+       }
+       class quartos {
+        int         id_quarto
+        string      tipo_de_cama
+        string      tipo_de_guarda_roupa
+        int         numero_de_pares_de_sapatos
+       }
+       class patio {
+        int         id_patio
+        int         numero_de_plantas 
+        int         pets
+        string      dog_or_cats
+
+       }
+       class garagem {
+        int         id_garagem
+        string      carro_ou_moto
+        int         numero_de_automoveis
+        string      tipo_de_portao
+        
+       }
+       class escritorio {
+        int         id_escritorio
+        string      pc_or_notebook
+        int         numero_de_munitores
+        string      tipo_de_cadeira
+        string      tipo_de_luminaria
+        string      tipo_de_mesa
+        int         numero_de_plantas
+       }

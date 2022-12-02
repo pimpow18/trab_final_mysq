@@ -1,0 +1,16 @@
+id_escritorio ;pc_or_notebook;numero_de_munitores;tipo_de_cadeira;tipo_de_luminaria;tipo_de_mesa;numero_de_plantas
+1;pc;2;cadeira gamer;abajur;mesa de escritorio estilo industrial;2
+2;pc;2;cadeira gamer;luminaria de chao;mesa de madeira em  L;4
+3;pc;1;cadeira de secretária giratoria;abajur;Escrivaninha Madesa Alaska;1
+4;notebook;1;cadeira ergonomica;luminaria de chao;mesa de escritorio estilo industrial;2
+5;pc;3;cadeira ergonomica;luminaria embutida;mesa de madeira em  L;2
+6;notebook;2;cadeira de secretária giratoria;luminaria embutida;mesa de escritorio estilo industrial;5
+7;notebook;1;cadeira ergonomica;luminaria de chao;mesa de escritorio estilo industrial;6
+8;pc;2;cadeira gamer;abajur;Escrivaninha Madesa Alaska;2
+9;notebook;1;cadeira de secretária giratoria;abajur;Escrivaninha Madesa Alaska;4
+10;pc;1;cadeira de secretária giratoria;abajur;Escrivaninha Madesa Alaska;6
+11;notebook;3;cadeira gamer;luminaria embutida;mesa de madeira em  L;4
+12;notebook;3;cadeira gamer;luminaria embutida;mesa de madeira em  L;5
+13;notebook;1;cadeira ergonomica;luminaria de chao;Escrivaninha Madesa Alaska;1
+14;pc;2;cadeira ergonomica;abajur;mesa de escritorio estilo industrial;6
+15;pc;2;cadeira gamer;luminaria embutida;Escrivaninha Madesa Alaska;4

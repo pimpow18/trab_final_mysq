@@ -1,0 +1,16 @@
+id_sala_de_estar;lugares_do_sofa;material_da_cadeira;tipos_de_mesa;plantas;numero_de_eletrodomesticos
+1;2;madeira;mesa bistrot;0;1
+2;3;madeira;mesa moderna de vidro;4;3
+3;3;plastico;mesa redonda de mármore;5;3
+4;4;metal;mesa de vidro com inox;2;1
+5;4;metal;mesa de vidro com inox;2;2
+6;3;madeira;mesa moderna de vidro;6;1
+7;2;madeira;mesa bistrot;2;5
+8;5;madeira;mesa bistrot;3;1
+9;4;plastico;mesa moderna de vidro;9;5
+10;6;plastico;mesa de vidro com inox;8;4
+11;4;madeira;mesa bistrot;4;1
+12;6;madeira;mesa moderna de vidro;9;6
+13;2;metal;mesa redonda de mármore;8;1
+14;5;madeira;mesa moderna de vidro;6;4
+15;2;metal;mesa de vidro com inox;3;6
