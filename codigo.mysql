@@ -1,0 +1,250 @@
+use senac;
+
+create table Casa (
+id 			 			int not null PRIMARY KEY,
+enderoco  			    char(50),
+cidade					char(50),
+estado					char(10),
+numero_de_residencia	int not null,
+cep						int not null
+);
+
+insert into Casa values
+(7,'liberato salzano', 218);
+
+-- constraint numero_de_residencia che
+
+create table Sala_de_estar(
+id_sala_de_estar              	int not null primary key,
+lugares_do_sofa			   		int not null, 
+material_da_cadeira             char(30),
+tipos_de_mesa					char(30),
+planta					        int not null,
+numero_de_eletrodomesticos	    int not null 
+);
+
+select * from sala_de_estar;
+
+create table Cozinha3 (
+id_cozinha						int not null primary key,
+Tipo_De_fogao					varchar(200),
+Numero_de_armarios				int not null,
+Tipo_de_geladeira				varchar(200),
+Data_do_ultimo_rancho			date
+);
+
+SELECT * FROM Cozinha3;
+ 
+-- drop table cozinha2;
+
+create table Patio (
+id_patio				int not null primary key,
+numero_de_plantas		int,
+pets					int,
+dog_or_cats				varchar(10)
+);
+
+select * from Patio;
+
+create table Garagem (
+id_garagem 					int not null primary key,
+carro_ou_moto				varchar(10),
+numero_de_automoveis		int,
+tipo_de_portao				varchar(50)
+);
+
+select * from Garagem;
+
+create table Banheiro (
+id_banheiro					int not null primary key,
+tipo_de_privadas			char(50),
+chuveiro_ou_banheira		char(30),
+tipos_de_pias				char(50),
+numero_de_plantas			int not null,
+numero_de_armarios			int not null
+);
+
+select * from banheiro;
+
+create table Quarto(
+id_quarto						int not null primary key,
+tipo_de_cama					char(50),
+tipo_de_guarda_roupa			char(90),
+numero_de_pares_de_sapatos		int
+);
+
+select * from Quarto;
+
+create table Escritorio (
+id_escritorio				int not null,
+pc_or_notebook				char(10),
+numero_de_munitores			int not null,
+tipo_de_cadeira				char(50),
+tipo_de_luminaria			char(30),
+tipo_de_mesa				char(60),
+numero_de_plantas			int
+);
+
+-- consultas para saber se a tabela está sem problemas
+
+select * from Casa;
+select * from sala_de_estar;
+select * from cozinha3;
+select * from Patio;
+select * from garagem;
+select * from banheiro;
+select * from quarto;
+select * from escritorio;
+
+-- 6 cinco consultas com join
+
+select Sala_de_estar.tipos_de_mesa, Escritorio.tipo_de_mesa from Sala_de_estar
+inner join Escritorio on Sala_de_estar.id_sala_de_estar = Escritorio.id_escritorio;
+
+select Cozinha3.Numero_de_armarios, banheiro.numero_de_armarios from Cozinha3
+inner join banheiro on Cozinha3.id_cozinha = banheiro.id_banheiro;
+
+select Sala_de_estar.material_da_cadeira, Escritorio.tipo_de_cadeira from Sala_de_estar
+inner join Escritorio on Sala_de_estar.id_sala_de_estar = Escritorio.id_escritorio;
+
+select Sala_de_estar.numero_de_eletrodomesticos, Escritorio.pc_or_notebook from Sala_de_estar 
+inner join Escritorio on Sala_de_estar.id_sala_de_estar = Escritorio.id_escritorio;
+
+select Patio.numero_de_plantas, banheiro.numero_de_plantas from Patio
+inner join banheiro on Patio.id_patio = banheiro.id_banheiro;
+
+
+
+-- 7 cinco consultas com order by
+
+select tipo_de_geladeira from cozinha3 group by tipo_de_geladeira;
+
+select tipo_de_cadeira from escritorio group by tipo_de_cadeira;
+
+select tipo_de_portao from garagem group by tipo_de_portao;
+
+select * from cozinha3 order by Data_do_ultimo_rancho desc;
+
+select * from quarto order by numero_de_pares_de_sapatos asc;
+
+
+-- 8. fazer cinco consultas com group by
+
+-- essas consultas contam quantos ids de uma tabela possuem em uma variavel da coluna dessa tabela 
+
+select tipo_de_geladeira, count(id_cozinha)
+from cozinha3 group by tipo_de_geladeira;
+
+select pc_or_notebook, count(id_escritorio)
+from escritorio group by pc_or_notebook;
+
+select Tipo_De_fogao, count(id_cozinha)
+from cozinha3 group by Tipo_De_fogao;
+
+select carro_ou_moto, count(id_garagem)
+from garagem group by carro_ou_moto;
+
+select tipos_de_mesa, count(id_sala_de_estar)
+from sala_de_estar group by tipos_de_mesa;
+
+
+-- 9 três consultas que combinem join e order by
+
+select quarto.tipo_de_cama, sala_de_estar.lugares_do_sofa from quarto
+inner join sala_de_estar on quarto.id_quarto = sala_de_estar.id_sala_de_estar
+order by quarto.tipo_de_cama desc,sala_de_estar.lugares_do_sofa;
+
+select count(id_quarto), tipo_de_cama
+from quarto group by tipo_de_cama;
+
+select count(id_patio), pets
+from patio group by dog_or_cats;
+
+
+
+-- 10 sete consultas que contemplem funções matemáticas
+
+select avg(lugares_do_sofa) from sala_de_estar;
+
+select sum(lugares_do_sofa) from sala_de_estar;
+
+select sum(lugares_do_sofa*planta) as total
+from sala_de_estar;
+ 
+select sum(pets) from patio;
+ 
+select round(avg(numero_de_plantas)) from escritorio;
+
+select round(avg(numero_de_automoveis)) from garagem;
+
+select avg(numero_de_munitores) from escritorio;
+
+
+-- 11 criar cinco visões 
+ 
+ -- foram cradas cinco visões uma da tabela casa, escritorio, patio, cozinha3, sala_de_estar
+ 
+create view t1 as select * from casa;
+select * from t1;
+ 
+create view pc as select pc_or_notebook from escritorio;
+select * from pc;
+
+create view pet as select pets from patio;
+select * from pet;
+
+create view rancho as select Data_do_ultimo_rancho from cozinha3;
+select * from rancho;
+
+create view mesa as select tipos_de_mesa from sala_de_estar;
+select * from mesa;
+
+
+
+-- 12 criar cinco savepoints para salvar um 
+
+savepoint p2;
+
+savepoint p3;
+
+savepoint p4;
+ 
+savepoint p5;
+
+savepoint p6;
+
+
+-- 13 criar três usuários distintos
+
+create user Abner@Kaiser.com
+identified by 'Oconnell';
+
+create user Yan@Dominguez.com
+identified by 'Wilkinson';
+
+create user Gabriel@Stephens.com
+identified by 'Mckee';
+
+-- o usuário abner só tera acesso as views 
+
+grant all on t1.* to 'Abner'@'Kaiser.com';
+
+grant all on pet.* to 'Abner'@'Kaiser.com';
+
+grant all on pc.* to 'Abner'@'Kaiser.com';
+
+-- o usuário Yan só poderá inserir dados sem ver
+
+grant insert on garagem.* to 'Yan'@'Dominguez.com';
+
+grant insert on banheiro.* to 'Yan'@'Dominguez.com';
+
+grant insert on sala_de_estar.* to 'Yan'@'Dominguez.com';
+
+-- o usuário Gabriel só pode ver sendo essa sua unica ação
+
+grant select on quarto.* to 'Gabriel'@'Stephens.com';
+
+grant select on patio.* to 'Gabriel'@'Stephens.com';
+
+grant select on cozinha3.* to 'Gabriel'@'Stephens.com';
